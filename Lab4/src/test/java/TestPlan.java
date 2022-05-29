@@ -21,6 +21,8 @@ public class TestPlan {
         webForm.enterLastName();
         webForm.enterJobTitle();
         webForm.HighestLevelOfEducation();
+        webForm.HighestLevelOfEducation2();
+        webForm.HighestLevelOfEducation3();
         webForm.pressSubmitButton();
     }
 

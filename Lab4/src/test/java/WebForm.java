@@ -8,6 +8,8 @@ public class WebForm extends PageObject{
     private final String LAST_NAME = "Last Name";
     private final String JOB_TITLE = "Job title";
     private final String Highest_Level_Of_Education = "Highest level of education";
+    private final String Highest_Level_Of_Education2 = "Highest level of education";
+    private final String Highest_Level_Of_Education3 = "Highest level of education";
 
     @FindBy(id = "first-name")
     private WebElement first_name;
@@ -18,8 +20,14 @@ public class WebForm extends PageObject{
     @FindBy(id = "job-title")
     private WebElement job_title;
 
-    @FindBy(id = "radio-button")
+    @FindBy(id = "radio-button-1")
     private WebElement Highest_level_of_education;
+
+    @FindBy(id = "radio-button-2")
+    private WebElement Highest_level_of_education2;
+
+    @FindBy(id = "radio-button-3")
+    private WebElement Highest_level_of_education3;
 
     @FindBy(xpath = "//a[contains(text(),'Submit')]")
     private WebElement submit_button;
@@ -36,11 +44,18 @@ public class WebForm extends PageObject{
         this.last_name.sendKeys(LAST_NAME);
     }
     public void enterJobTitle(){
-        this.last_name.sendKeys(JOB_TITLE);
+        this.job_title.sendKeys(JOB_TITLE);
     }
 
     public void HighestLevelOfEducation(){
-        this.last_name.sendKeys(Highest_Level_Of_Education);
+        this.Highest_level_of_education.click();
+    }
+    public void HighestLevelOfEducation2(){
+        this.Highest_level_of_education2.click();
+    }
+
+    public void HighestLevelOfEducation3(){
+        this.Highest_level_of_education3.click();
     }
 
 
